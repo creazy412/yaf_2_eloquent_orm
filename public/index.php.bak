@@ -1,0 +1,8 @@
+<?php
+use Yaf\Application;
+use Yaf\Exception;
+// var_dump(new Yaf_Application('n'));die;
+define("APP_PATH", realpath(dirname(__FILE__) . '/')); /**/
+//echo dirname(APP_PATH);die;
+$app = new Yaf_Application(APP_PATH . "\conf\application.ini");
+$app->run();
