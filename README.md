@@ -6,9 +6,13 @@
 2.Eloquent ORM 方式
 
 public function indexAction(){}
+
 public function bootstrapAction(){} // 使用ORM方式
+
 public function addAction(){} // pdo 方式
+
 public function editAction(){} // pdo 方式
+
 public function delAction(){} // pdo 方式
 
 切记：
