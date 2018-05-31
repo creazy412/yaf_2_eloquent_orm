@@ -19,6 +19,7 @@ public function delAction(){} // pdo 方式
 项目若要运行，记得在 php.ini 文件中把
 
 yaf.use_namespace=1
+
 yaf.use_spl_autoload=1
 
 打开。
