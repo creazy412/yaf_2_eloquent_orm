@@ -31,7 +31,7 @@ class Bootstrap extends YAF_Bootstrap_Abstract
 		/**
 		* 添加配置中的路由
 		*/
-		@$router->addConfig(Registry::get("config")->routes);
+		@$router->addConfig(YAF_Registry::get("config")->routes);
 	}
 
 	public function _initComposerAutoload(YAF_Dispatcher $dispatcher)
