@@ -4,7 +4,7 @@ use Yaf\Controller_Abstract;
 // use models\Yaf;
 // use library\MyPDO;
 
-class IndexController extends Controller_Abstract
+class IndexController extends YAF_Controller_Abstract
 {
     public function indexAction()
     {

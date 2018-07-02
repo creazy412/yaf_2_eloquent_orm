@@ -10,35 +10,35 @@ use Yaf\Registry;
 * 这些方法, 都接受一个参数:Yaf_Dispatcher $dispatcher
 * 调用的次序, 和申明的次序相同
 */
-class Bootstrap extends Bootstrap_Abstract
+class Bootstrap extends YAF_Bootstrap_Abstract
 {
     public function _initConfig()
 	{
-	    $config = Application::app()->getConfig();
-		Registry::set("config", $config);
+	    $config = YAF_Application::app()->getConfig();
+		YAF_Registry::set("config", $config);
 	}
 
-	public function _initDefaultName(Dispatcher $dispatcher)
+	public function _initDefaultName(YAF_Dispatcher $dispatcher)
 	{
 	    $dispatcher->setDefaultModule("Index")
 			->setDefaultController("Index")
 			->setDefaultAction("index");
 	}
 
-	public function _initRoute(Dispatcher $dispatcher)
+	public function _initRoute(YAF_Dispatcher $dispatcher)
 	{
-	    $router = Dispatcher::getInstance()->getRouter();
+	    $router = YAF_Dispatcher::getInstance()->getRouter();
 		/**
 		* 添加配置中的路由
 		*/
 		@$router->addConfig(Registry::get("config")->routes);
 	}
 
-	public function _initComposerAutoload(Dispatcher $dispatcher)
+	public function _initComposerAutoload(YAF_Dispatcher $dispatcher)
 	{
 	    $autoload = APP_PATH . '\vendor\autoload.php';
 		if (file_exists($autoload)) {
-		    Loader::import($autoload);
+		    YAF_Loader::import($autoload);
 		}
 	}
 }
