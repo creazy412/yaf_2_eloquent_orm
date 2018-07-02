@@ -6,7 +6,7 @@ use Yaf\Loader;
 
 define("APP_PATH", realpath(dirname(__FILE__) . '/../')); /**/
 
-$app = new YAF_Application(APP_PATH . "\conf\application.ini");
+$app = new YAF_Application(APP_PATH . "\conf\application.ini", ini_get('yaf.environ'));
 /*
  * --------------------------------------------------------------------
  * LOAD Laravel Eloquent ORM
