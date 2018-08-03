@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * User Model
+ * 
+ * @category Xxx
+ * @package  Xxx
+ * @author   laok <laok518@126.com>
+ * @license  gun http://www.gun.org
+ * @link     Xxx
+ */
 use Yaf\Bootstrap_Abstract;
 use Yaf\Dispatcher;
 use Yaf\Loader;
@@ -12,12 +20,22 @@ use Yaf\Registry;
 */
 class Bootstrap extends YAF_Bootstrap_Abstract
 {
+    /**
+     * 初始化配置
+     * 
+     * @return null
+     */
     public function _initConfig()
-	{
-	    $config = YAF_Application::app()->getConfig();
-		YAF_Registry::set("config", $config);
-	}
+    {
+        $config = YAF_Application::app()->getConfig();
+        YAF_Registry::set("config", $config);
+    }
 
+	/**
+  * 初始化配置
+    * 
+    * @return null
+    */
 	public function _initDefaultName(YAF_Dispatcher $dispatcher)
 	{
 	    $dispatcher->setDefaultModule("Index")
@@ -25,15 +43,25 @@ class Bootstrap extends YAF_Bootstrap_Abstract
 			->setDefaultAction("index");
 	}
 
-	public function _initRoute(YAF_Dispatcher $dispatcher)
-	{
-	    $router = YAF_Dispatcher::getInstance()->getRouter();
+	/**
+    * 初始化配置
+    * 
+    * @return null
+    */
+    public function _initRoute(YAF_Dispatcher $dispatcher)
+    {
+        $router = YAF_Dispatcher::getInstance()->getRouter();
 		/**
 		* 添加配置中的路由
-		*/
-		@$router->addConfig(YAF_Registry::get("config")->routes);
-	}
+        */
+        @$router->addConfig(YAF_Registry::get("config")->routes);
+    }
 
+	/**
+    * 初始化配置
+    * 
+    * @return null
+    */
 	public function _initComposerAutoload(YAF_Dispatcher $dispatcher)
 	{
 	    $autoload = APP_PATH . '\vendor\autoload.php';

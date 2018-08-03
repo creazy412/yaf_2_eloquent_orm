@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * 默认index
+ * 
+ * @category Xxx
+ * @package  Xxx
+ * @author   laok <laok518@126.com>
+ * @license  gun http://www.gun.org
+ * @link     Xxx
+ */
 //define("APP_PATH") OR exit("No direct script access allowed");
 
 use Illuminate\Database\Capsule\Manager as Capsule;
